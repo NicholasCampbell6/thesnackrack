@@ -1,0 +1,8 @@
+[04-Apr-2019 13:36:34 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/inc/dbh.inc.php on line 7
+[04-Apr-2019 13:36:34 UTC] PHP Stack trace:
+[04-Apr-2019 13:36:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/inc/dbh.inc.php:0
+[04-Apr-2019 13:36:34 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/inc/dbh.inc.php:7
+[04-Apr-2019 13:36:54 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'user'@'localhost' (using password: NO) in /home/ubuntu/workspace/inc/dbh.inc.php on line 7
+[04-Apr-2019 13:36:54 UTC] PHP Stack trace:
+[04-Apr-2019 13:36:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/inc/dbh.inc.php:0
+[04-Apr-2019 13:36:54 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/inc/dbh.inc.php:7

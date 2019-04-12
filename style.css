@@ -1,0 +1,535 @@
+
+/* Navbar */
+
+.navbar {
+    width: 98%;
+    color: white;
+    font-family: Coiny;
+    background-color: hsla(0, 0%, 20%, .9);
+    display: flex;
+    position: fixed;
+    left: 1%;
+    top: 2%;
+    z-index: 1;
+    border-radius: 1vw;
+}
+
+.navbar a {
+    margin-left: 2vw;
+}
+
+.navButton {
+    font-family: "Permanent Marker";
+    cursor: pointer;
+    color: white;
+    font-size: 1.2vw;
+    padding: 2vw;
+}
+
+.navButton:hover {
+    background-color: hsla(0, 0%, 20%, 1);
+}
+
+#logo {
+    font-family: Coiny;
+    font-size: 2.1vw;
+    padding: 1vw;
+    border-radius: 1vw 0 0 1vw;
+}
+
+#logo:hover {
+    background-color: hsla(0, 0%, 20%, 1);
+}
+
+#home {
+    color: white;
+    margin: .1vw;
+}
+
+#login {
+    position: absolute;
+    right: 0;
+    border-radius: 0 1vw 1vw 0;
+}
+
+#loginScreen {
+    background-color: white;
+    position: fixed;
+    top: 7vw;
+    right: 2vw;
+    width: 20vw;
+    border: 1px solid black;
+    height: 25vw;
+    border-radius: 1vw;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.1s;
+    z-index: 1;
+}
+
+#windBack {
+    display: block; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    transition: opacity .3s;
+    opacity: 1;
+    z-index: 5;
+}
+
+
+#loginErr {
+    text-align: center;
+    border: 2px solid #ff3333;
+    border-radius: 1vw;
+    width: 20vw;
+    background: antiqueWhite;
+    position: absolute;
+    left: 40vw;
+    top: 20vw;
+}
+
+#loginSuccess {
+    text-align: center;
+    border: 2px solid #00ccff;
+    border-radius: 1vw;
+    width: 20vw;
+    background: antiqueWhite;
+    position: absolute;
+    left: 40vw;
+    top: 20vw;
+}
+
+/* General */
+
+html {
+    background-image: url("./Pictures/background.jpeg");
+    background-repeat: repeat-y;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    width: auto;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: 1px solid black;
+    height: 10vw;
+    width: 95%;
+    position: relative;
+    left: 2vw;
+    background-color: hsla(0, 0%, 100%, .8);
+    text-align: left;
+}
+
+.itemName {
+    font-size: 1.5vw;
+    color: black;
+    margin: 0;
+    text-decoration: bold;
+    position: relative;
+    left: 1vw;
+    top: 1vw;
+}
+
+.itemPrice {
+    font-size: 1vw;
+    color: black;
+    margin: 0;
+    position: relative;
+    left: 1vw;
+    top: 1vw;
+}
+
+.includes {
+    font-size: 1.2vw;
+    color: black;
+    margin: 0;
+    position: relative;
+    left: 30vw;
+    bottom: 3vw;
+}
+
+.item ul {
+    position: relative;
+    left: 29vw;
+    bottom: 4vw;
+}
+
+.item ul li {
+    font-size: 1vw;
+    color: black;
+}
+
+.itemImg {
+    height: 9vw;
+    position: absolute;
+    right: 15vw;
+    top: 0;
+    width: auto;
+}
+
+.addToCart {
+    background: #33ccff;
+    padding: 1vw;
+    font-size: 1vw;
+    position: absolute;
+    right: 3vw;
+    top: 3vw;
+}
+
+x {
+    position: absolute;
+    right: 1vw;
+    top:.5vw;
+}
+
+x:hover {
+    cursor: pointer;
+}
+
+.tooltip {
+    transition: opacity .3s;
+    opacity: 0;
+    position: absolute;
+    top: .1vw;
+    right: 2vw;
+    color: white;
+    padding: .5vw;
+    width: 7vw;
+    background: hsla(0, 0%, 1%, .8);
+    display: none;
+}
+
+x:hover .tooltip {
+    opacity: 1;
+    display: inherit;
+}
+
+/* Content */
+
+.content {    
+    background-size: 100%;
+    color: white;
+    font-family: Coiny;
+    font-size: 2vw;
+    position: absolute;
+    top: 5vw;
+    left: 0;
+    height: 38vw;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+}
+
+/* Description */
+
+#description {
+    background-color: white;
+    width: 80vw;
+    position: relative;
+    top: 2vw;
+    left: 10%;
+    text-align: center;
+    border-radius: 1vw;
+    box-shadow: black 5px 5px 15px;
+}
+
+#description h1 {
+    width: auto;
+    color: black;
+}
+
+/* Breads */
+
+#bread {
+    background-image: url("/Pictures/baked-bread-brown-42064.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    width: auto;
+    position: relative;
+    top: 12vw;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+#breadHeading {
+    font-size: 25px;
+    color: white;
+    background-color: hsla(0, 10%, 0%, .6);
+    width: 40vw;
+    position: relative;
+    left: 30%;
+    top: 1vw;
+    border-radius: 1vw;
+}
+
+#breadcontent {
+    border: solid;
+    border-radius: 1vw;
+    position: relative;
+}
+
+/* Desserts */
+
+#DessertsHeading {
+    font-size: 25px;
+    color: white;
+    background-color: hsla(0, 10%, 0%, .6);
+    width: 40vw;
+    position: relative;
+    left: 30%;
+    top: 1vw;
+    border-radius: 1vw;
+}
+
+#Desserts {
+    background-image: url("./Pictures/cookies-cup-dessert-245669.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    width: auto;
+    position: relative;
+    top: 18vw;
+    text-align: center;
+}
+
+#dessertscontent {
+    border: solid;
+    border-radius: 1vw;
+    position: relative;
+    margin: 30%;
+    
+}
+
+/* Recipes */
+
+#recipesheading {
+    font-size: 25px;
+    color: white;
+    background-color: hsla(0, 10%, 0%, .6);
+    width: 40vw;
+    position: relative;
+    left: 30%;
+    top: 1vw;
+    border-radius: 1vw;
+}
+
+#recipes {
+    background-image: url("./Pictures/bread-cooking-delicious-268328.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 60%;
+    width: auto;
+    position: relative;
+    top: 30vw;
+    text-align: center;
+}
+
+/* Items */
+
+
+
+
+/* Cart */
+
+.backButton {
+    background-color: hsla(0, 0%, 20%, .9);
+    font-family: Coiny;
+    font-size: 3vw;
+    width: 30vw;
+    height: 5vw;
+    color: white;
+}
+
+#cart {
+    color: white;
+    font-size: 1vw;
+    border-radius: 1vw 1vw 0 0;
+    text-align: center;
+    background-color: hsla(0, 0%, 20%, 1);
+    font-family: Coiny;
+    position: relative;
+    top: 5vw;
+}
+
+#cartItems {
+    border-radius: 0 0 1vw 1vw;
+    background-color: hsla(0, 0%, 100%, .9);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3vw 1fr 1fr 1fr;
+    height: 45vw;
+    overflow-y: auto;
+    border: 1px solid black;
+    position: relative;
+    top: 3vw;
+}
+
+.gridHeading {
+    margin-top: .5vw;
+    font-size: 1.5vw;
+    border-bottom: 1px solid black;
+    font-family: Bitter;
+}
+
+.gridHeading p {
+    margin: 0 0 0 .5vw;
+}
+
+.A {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.button1 {
+    float: right;
+    margin-top: -70px;
+    background: #ff6600;
+    border-radius: 16px;
+    padding: 13px 13px;
+    color: black;
+    font: normal bold 17px/1 "Roboto", sans-serif;
+    text-align: center;
+    text-shadow: 0px 0px #000000;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Sign Up Page */
+#signup {
+    position: absolute;
+    left: 2.8vw;
+    border-radius: 1em;
+    background-color: white;
+    top: 10vw;
+    width: 95%;
+    padding-bottom: 4vw;
+}
+
+#SUTable {
+    margin-left: 3vw;
+    margin-bottom: 3vw;
+    background-color: #e6e6e6;
+    width: 95%;
+    font-size: 1.5vw;
+    border-collapse: collapse;
+}
+
+#SUTable tr:nth-child(even) {
+    background-color: #ffce99;
+}
+
+th {
+    text-align: left;
+    width: 20%;
+    padding: 1vw;
+}
+
+td input {
+    width: 96%;
+    height: 1.5vw;
+    padding: 1vw;
+    font-size: 1.5vw;
+    background-color: inherit;
+    border-radius: 1vw;
+    border: 1px solid black;
+}
+
+#submitBtn {
+    height: 3vw;
+    width: 8vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    position:absolute;
+    left: 45vw;
+    bottom: 2vw;
+    font-size: 1.5vw;
+    border: 1px solid black;
+}
+
+.product-image {
+    float: left; 
+    max-width: 50px;
+    height: auto;
+}
+
+#errorMsg {
+    border: 2px solid #ff3333;
+    border-radius: 1vw;
+    width: 20vw;
+    background: antiqueWhite;
+    position: fixed;
+    left: 40vw;
+    bottom: 25vw;
+    transition: opacity .3s;
+    opacity: 1;
+}
+
+#errorMsg h3 {
+    text-align: center;
+}
+
+#errorMsg p {
+    text-align: center;
+}
+
+#thankYou {
+    border: 2px solid #00ccff;
+    border-radius: 1vw;
+    width: 20vw;
+    background: antiqueWhite;
+    position: absolute;
+    left: 40vw;
+    bottom: 25vw;
+    transition: opacity .3s;
+    opacity: 1;
+}
+
+#thankYou h3 {
+    text-align: center;
+}
+
+
+/* Admin Page */
+
+.adminTable {
+    font-size: 1vw;
+    background: white;
+    height: auto;
+
+    
+}
+
+.adminTableContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.aTHeading {
+    text-align: center;
+    width: 20vw;
+    background:white;
+    margin-top: 9vw;
+    font-family: Coiny;
+    border-radius: 1vw;
+    border: 1px solid black;
+}
